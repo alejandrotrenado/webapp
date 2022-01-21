@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, escape, session
 from search4letters import search4letters, log_request
 from DBcm import SQLError, UseDatabase, ConnectionError, CredentialsError
 from collections import Counter
+from manage_db import check_db
 
 app = Flask(__name__)
 
@@ -33,7 +34,7 @@ def getuser():
 
 @app.route("/")
 def hello():
-    return redirect("/entry")
+    return redirect("/index")
 
 @app.route("/stats")
 def stats():
@@ -131,6 +132,10 @@ def do_search():
 def entry_page():
     return render_template("entry.html",
                             the_title = "Welcome to search for letters on the web!")
-    
+
+@app.route("/index")
+def index_page():
+    return render_template("index.html",
+                            the_title = "Index webapp")    
 if __name__=="__main__":
     app.run(debug=True)
