@@ -1,0 +1,2 @@
+ImmutableMultiDict([('phrase', 'hola que tal'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (X11; Linux x86_64; rv:94.0) Gecko/20100101 Firefox/94.0|{'u', 'e', 'a', 'o'}
+ImmutableMultiDict([('phrase', 'illooooo'), ('letters', 'asldfi')])|127.0.0.1|Mozilla/5.0 (X11; Linux x86_64; rv:94.0) Gecko/20100101 Firefox/94.0|{'l', 'i'}
